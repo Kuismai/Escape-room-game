@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48cf9218a003e542a463c41da70a78c, type: 3}
   m_Name: Clue
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Clue
   itemIcon: {fileID: 0}
   model: {fileID: 0}

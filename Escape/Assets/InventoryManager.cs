@@ -4,26 +4,30 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public ItemClass itemToAdd;
-    public ItemClass itemToRemove;
+    [SerializeField] private GameObject slotList;
+    [SerializeField] private ItemClass itemToAdd;
+    [SerializeField] private ItemClass itemToRemove;
 
     public List<ItemClass> items = new List<ItemClass>();
 
+    private GameObject[] slots;
+
     public void Start()
     {
-        Remove(itemToRemove);
-        Add(itemToAdd);
+        // Get all inventory slots
+        slots = new GameObject[slotList.transform.childCount];
+        
+        //Remove(itemToRemove);
+        //Add(itemToAdd);
     }
 
     public void Add(ItemClass item)
     {
         items.Add(item);
-        Debug.Log("tried to add!");
     }
 
     public void Remove(ItemClass item)
     {
         items.Remove(item);
-        Debug.Log("tried to remove!");
     }
 }
