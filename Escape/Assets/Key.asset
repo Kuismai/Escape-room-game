@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Key
   m_EditorClassIdentifier: 
   itemName: FinalKey
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 3f8a633d0486aba45a5e00dd68d7ca97, type: 3}
+  model: {fileID: 0}
