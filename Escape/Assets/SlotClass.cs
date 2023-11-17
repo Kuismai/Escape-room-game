@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class SlotClass
 {
-    private ItemClass item;
-    private int quantity;
+    [SerializeField] private ItemClass item;
+    [SerializeField] private int quantity;
+    [SerializeField] private InventoryManager itemSystem;
 
     // Start is called before the first frame update
 
@@ -23,9 +24,29 @@ public class SlotClass
         quantity = _quantity;
     }
 
+    public SlotClass (SlotClass slot)
+    {
+        this.item = slot.GetItem();
+        this.quantity = slot.GetQuantity();
+    }
+
+    public void Clear()
+    {
+        this.item = null;
+        this.quantity = 0;
+
+    }
     
     public ItemClass GetItem() { return item; }
     public int GetQuantity() { return quantity; }
     public void AddQuantity(int _quantity) { quantity += _quantity; }
+    public void SubQuantity(int _quantity) { quantity -= _quantity; }
+    
+    public void AddItem(ItemClass item, int quantity)
+    {
+        this.item = item;
+        this.quantity = quantity;
+    }
+
 
 }

@@ -17,7 +17,7 @@ public class PickUp : MonoBehaviour
 
     void OnMouseDown ()
     {
-        inventoryScript.Add(thisItem); 
+        inventoryScript.Add(thisItem, 1); 
         Debug.Log("added?");
         Myself.SetActive(false);
     }
