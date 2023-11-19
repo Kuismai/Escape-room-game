@@ -43,7 +43,7 @@ public class InventoryManager : MonoBehaviour
         RefreshUI();
         
     //    Remove(itemToRemove);
-        Add(itemToAdd, 1);
+    //    Add(itemToAdd, 1);
     }
 
     private void Update()

@@ -5,6 +5,8 @@ using UnityEngine;
 public class LockCheck : MonoBehaviour
 {
     
+    [SerializeField] private AudioSource audioSource;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class LockCheck : MonoBehaviour
         if (solution1 == offer1)
         {
             Debug.Log("Correct!");
+            audioSource.Play(0);
             return true;
         }
         else

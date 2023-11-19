@@ -7,11 +7,12 @@ public class CheckItem : MonoBehaviour
     [SerializeField] private InventoryManager inventorySystem;
     [SerializeField] private ItemClass usedItem;
     private ItemClass activeItem;
+    AudioSource audioData;
     
     // Start is called before the first frame update
     void Start()
     {
-
+        audioData = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
